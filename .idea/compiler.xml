@@ -7,13 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Proj" />
+        <module name="Proj2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="13" />
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Proj" options="--add-exports jdk.javadoc/jdk.javadoc.internal.doclets.toolkit.util=ALL-UNNAMED" />
-    </option>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

@@ -1,12 +1,3 @@
-import jdk.javadoc.internal.doclets.toolkit.util.DocFile;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.io.File;
-
-
 /*public class NameF {
     //public class testClass {
        // private static Object WebElement;
