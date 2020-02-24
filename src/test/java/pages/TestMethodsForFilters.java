@@ -36,8 +36,7 @@ public class TestMethodsForFilters {
         buttonBitsAllo.click();
 
         inputPrizWindAllo.click();
-        inputPrizWindAllo.clear();
-        inputPrizWindAllo.sendKeys("2000");
+
 
 
         //WebElement searchField = driver.findElement(By.cssSelector("input.gLFyf.gsfi"));

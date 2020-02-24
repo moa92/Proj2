@@ -3,15 +3,61 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
 import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 
 public class testClass {
+    @Test
+    public void Test() throws IOException, InterruptedException {
+
+        String exePath = "/Users/Oksana_Moshkivska/Downloads/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", exePath);
+
+       WebDriverWait wait;
+
+        WebDriver driver = new ChromeDriver();
+        WebDriverWait wait;
+        wait = new WebDriverWait(driver,15);
+        String searhWebSait = "https://allo.ua";
+        driver.get(searhWebSait);
+
+        WebElement buttonNaushn = driver.findElement(By.cssSelector("#nav > li.level0.nav-3.level-top > div > a > span"));
+        WebElement buttonBitsAllo = driver.findElement(By.cssSelector("#menu_naushniki_i_akustika .first.column  li:nth-child(3) > a[href='//allo.ua/ua/naushniki/proizvoditel-beats/']"));
+        WebElement inputWindForPriceAlloFilter =  driver.findElement(By.cssSelector(".input-text.navigation-from.validate-digits"));
+        WebElement valueInPriceField = driver.findElement(By.cssSelector("span > span.new_sum"));
+
+
+        buttonNaushn.click();
+        buttonBitsAllo.click();
+        inputWindForPriceAlloFilter.click();
+        inputWindForPriceAlloFilter.clear();
+        inputWindForPriceAlloFilter.sendKeys("4000");
+        inputWindForPriceAlloFilter.submit();
+        Thread.sleep(8000);
+
+        ArrayList informationValuePrice = new ArrayList();
+        informationValuePrice.add(valueInPriceField);
+
+
+        for (type  : informationValuePrice) {
+
+
+            Assertions
+        }
+
+
+        driver.quit();
+    }
+
+
+
 
     @Test
     public void testGoogleSearch1() throws IOException {
