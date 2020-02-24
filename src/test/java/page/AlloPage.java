@@ -27,7 +27,9 @@ public class AlloPage extends BasePage {
     }
 
     public AlloPage openCatalog() {
-        catalogButton.click();
+        if(!catalogButton.isDisplayed()) {
+            catalogButton.click();
+        }
         return this;
     }
 
